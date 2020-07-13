@@ -69,6 +69,9 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    haml (5.1.2)
+      temple (>= 0.8.0)
+      tilt
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -183,6 +186,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    simple_form (5.0.2)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -194,6 +200,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    temple (0.8.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -223,6 +230,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  haml (= 5.1.2)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
@@ -233,6 +241,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   sass-rails (>= 6)
+  simple_form (= 5.0.2)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
