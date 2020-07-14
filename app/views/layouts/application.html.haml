@@ -9,7 +9,28 @@
   = csp_meta_tag
 
 %body
-  -flash.each do |name, msg|
-    =content_tag :div, msg, class: "alert alert-info"
+  %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    .container
+      .navbar-brand= link_to "Instagramm", root_path
+      .collapse.navbar-collapse
+        - if user_signed_in?
+          %ul.navbar-nav
+            %li.nav-item.navcollapse
+              = link_to "Gram It!", new_pic_path
+            %li.nav-item.navcollapse
+              = link_to "Settings", edit_user_registration_path
+            %li.nav-item.navcollapse
+              = link_to "Sign Out", destroy_user_session_path, method: :delete
 
-  = yield
+        - else
+          %ul.navbar-nav
+            %li.nav-item.navcollapse
+              = link_to "Join", new_user_registration_path
+            %li.nav-item.navcollapse
+              = link_to "Log In", new_user_session_path
+
+  .container
+    -flash.each do |name, msg|
+      =content_tag :div, msg, class: "alert alert-info"
+
+    = yield
