@@ -4,4 +4,7 @@
       .card-header
         %h1 Fix Pic
       .card-body
+        .current_image
+          %strong.center Right Now
+          = image_tag @pic.pic_image.variant(resize_to_limit: [100, nil]) if @pic.pic_image.attached?
         = render 'form'
